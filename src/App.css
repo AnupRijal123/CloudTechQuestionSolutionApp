@@ -1,8 +1,49 @@
-h1,
-p {
+h2,
+p,
+h3 {
   margin: 0;
 }
 
-.main-container {
-  background-color: red;
+
+
+.content-container {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 2s ease;
+}
+
+.black-background {
+  background-color: #111;
+}
+
+.dynamic-text {
+  color: #3a3b3c;
+  transition: all 1.5s ease;
+}
+
+.black-background .dynamic-text {
+  color: #ffffff;
+}
+
+button {
+  background-color: #f78da7;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.1);
+  filter: brightness(80%);
 }

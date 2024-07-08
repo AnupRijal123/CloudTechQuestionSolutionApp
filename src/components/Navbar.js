@@ -1,15 +1,25 @@
 import './Navbar.css';
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleClick } from '../redux/action.js';
+
 function Navbar() {
-    const [toggleButtonClicked, setToggleClicked] = useState(null);
+    const toggleButtonClicked = useSelector((state) => {
+        return state.toggleButtonClicked;
+    });
+
+    const makeToggle = useDispatch();
+
     const handleToggleClick = () => {
-        console.log('clicked');
-        setToggleClicked(!toggleButtonClicked);
+        makeToggle(toggleClick(!toggleButtonClicked));
     }
+
     return (
         <div className="navbar">
-            <h1>Navbar</h1>
-            <div onClick={handleToggleClick} className="toggle-button-container">
+            <h2>Navbar</h2>
+            <div onClick={handleToggleClick}
+                className={`toggle-button-container 
+                ${toggleButtonClicked === true && 'darkmode'}
+                `}>
                 <div
                     className={`circle-button 
                     ${toggleButtonClicked === true && 'move-to-right'}

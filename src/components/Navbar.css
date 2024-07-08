@@ -1,22 +1,31 @@
 .navbar {
-    background-color: yellow;
+    background-color: #3a3b3c;
     padding: 10px 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+h2 {
+    color: rgba(128, 128, 128);
+}
+
 .toggle-button-container {
-    background-color: pink;
+    background-color: #ffffff;
     width: 60px;
     height: 30px;
     cursor: pointer;
     border-radius: 20px;
     position: relative;
+    transition: all 1.5s ease;
+}
+
+.darkmode {
+    background-color: rgba(128, 128, 128);
 }
 
 .circle-button {
-    background-color: blue;
+    background-color: #749dc5;
     width: 30px;
     height: 100%;
     border-radius: 50px;
