@@ -1,0 +1,53 @@
+.navbar {
+    background-color: yellow;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toggle-button-container {
+    background-color: pink;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+}
+
+.circle-button {
+    background-color: blue;
+    width: 30px;
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+}
+
+.move-to-right {
+    animation: moveRight 1s forwards;
+}
+
+@keyframes moveRight {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 30px;
+    }
+}
+
+.move-to-left {
+    animation: moveLeft 1s forwards;
+}
+
+@keyframes moveLeft {
+    0% {
+        left: 30px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
