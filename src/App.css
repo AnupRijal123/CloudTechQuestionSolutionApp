@@ -28,12 +28,12 @@ h3 {
 }
 
 button {
-  background-color: #f78da7;
+  background-color: #749dc5;
   border: none;
   border-radius: 5px;
   color: #ffffff;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 10px 10px;
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.4s ease;
