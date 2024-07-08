@@ -1,6 +1,8 @@
 import './Navbar.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleClick } from '../redux/action.js';
+import { FaGithub } from "react-icons/fa";
+
 
 function Navbar() {
     const toggleButtonClicked = useSelector((state) => {
@@ -15,7 +17,10 @@ function Navbar() {
 
     return (
         <div className="navbar">
-            <h2>Navbar</h2>
+            <div className="link-div">
+                <a href="https://github.com/AnupRijal123/CloudTechQuestionSolutionApp/tree/master">github code</a>
+                <FaGithub />
+            </div>
             <div onClick={handleToggleClick}
                 className={`toggle-button-container 
                 ${toggleButtonClicked === true && 'darkmode'}

@@ -25,29 +25,30 @@ function QuestionTwo() {
     }
 
     const handleGetAnswerClicked = () => {
-
-        const sortedArray = [...mainArray]
-        sortedArray.sort();
-
-        let smallestPositiveInteger = 1;
-        let i = 0;
-        while (i < sortedArray.length) {
-            if (smallestPositiveInteger === sortedArray[i]) {
-                smallestPositiveInteger = smallestPositiveInteger + 1;
-                setResult(smallestPositiveInteger);
+        console.log(mainArray);
+        let unpaired = null;
+        for (let i = 0; i < mainArray.length; i++) {
+            let count = 0;
+            for (let j = 0; j < mainArray.length; j++) {
+                if (mainArray[i] === mainArray[j]) {
+                    count = count + 1;
+                }
             }
-            else {
-                setResult(smallestPositiveInteger)
+            if (count === 1) {
+                unpaired = mainArray[i];
+                setResult(unpaired);
             }
-            i++;
+
         }
+
 
     }
 
 
+
     return (
         <div className="question2-container">
-            <h2 className="dynamic-text">No.2</h2>
+            <h2 className="dynamic-text">No.1</h2>
             <div className="row">
                 <h2 className="dynamic-text ">Enter array element</h2>
 
@@ -88,7 +89,7 @@ function QuestionTwo() {
             </div>
 
             <div className="row">
-                <h3 className="dynamic-text">Smallest positive Integer = {result} </h3>
+                <h3 className="dynamic-text">Unpaired element = {result} </h3>
 
                 {showGetAnswerButton === true
                     &&

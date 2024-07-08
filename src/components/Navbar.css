@@ -6,7 +6,16 @@
     align-items: center;
 }
 
-h2 {
+.link-div {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar h2 {
     color: #749dc5;
 }
 
